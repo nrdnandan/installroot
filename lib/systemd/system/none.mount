@@ -1,0 +1,20 @@
+[Unit]
+Description=Droid mount for none
+Before=local-fs.target systemd-modules-load.service
+
+[Mount]
+What=/dev/block/zram0
+Where=none
+Type=swap
+Options=defaults
+# Options had SELinux context option:  
+
+# Default is 90 which makes mount period too long in case of
+# errors so drop it down a notch.
+TimeoutSec=10
+
+[Install]
+WantedBy=local-fs.target
+
+# From ./out/target/product/wt88047/root/fstab.qcom :
+# /dev/block/zram0                             none         swap    defaults zramsize=536870912,zramstreams=3

@@ -1,0 +1,5 @@
+/home/neerad/mer/android/droid/out/target/product/wt88047/obj/lib/crtend_android.o: \
+ bionic/libc/arch-common/bionic/crtend.S \
+ bionic/libc/arch-common/bionic/asm_multiarch.h
+ bionic/libc/arch-common/bionic/crtend.S :
+ bionic/libc/arch-common/bionic/asm_multiarch.h :
